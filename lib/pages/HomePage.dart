@@ -11,6 +11,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.grey[100],
        body: Column(
+         crossAxisAlignment: CrossAxisAlignment.start,
          children: <Widget>[
            Container(
               height: 300,
@@ -53,12 +54,58 @@ class _HomePageState extends State<HomePage> {
                    ),
                    ),
                    SizedBox(height: 30,),
+
                  ],
                ),
              ),
+
            ),
+           SizedBox(height: 30,),
+           Container(
+             padding: EdgeInsets.symmetric(horizontal: 20),
+             child: Column(
+               crossAxisAlignment: CrossAxisAlignment.start,
+               children: <Widget>[
+                 Text("Best Destination", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey[800], fontSize: 20),),
+                 SizedBox(height: 20,),
+                 Container(
+                   height: 200,
+
+                   child: ListView(
+                     scrollDirection: Axis.horizontal,
+                     children: <Widget>[
+                       makeItem(image: 'assets/images/bagan.jpg'),
+                       makeItem(image: 'assets/images/kalaw.jpg'),
+                       makeItem(image: 'assets/images/m.jpg'),
+                       makeItem(image: 'assets/images/yangon.jpg'),
+                       makeItem(image: 'assets/images/chaungtha.jpg'),
+                       makeItem(image: 'assets/images/khakavorazi.jpg'),
+
+                     ],
+                   ),
+                 )
+               ],
+             ),
+           )
+
          ],
        ),
+    );
+  }
+
+  Widget makeItem({image}){
+    return AspectRatio(
+      aspectRatio: 1 / 1,
+      child: Container(
+        margin: EdgeInsets.only(right:20),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          image: DecorationImage(
+            image: AssetImage(image),
+            fit: BoxFit.cover
+          )
+        ),
+      ),
     );
   }
 }

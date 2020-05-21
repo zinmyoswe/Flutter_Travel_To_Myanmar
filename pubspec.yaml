@@ -44,6 +44,13 @@ flutter:
   assets:
     - assets/images/cover1.jpg
     - assets/images/cover2.jpg
+    - assets/images/bagan.jpg
+    - assets/images/chaungtha.jpg
+    - assets/images/m.jpg
+    - assets/images/kalaw.jpg
+    - assets/images/yangon.jpg
+    - assets/images/khakavorazi.jpg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
